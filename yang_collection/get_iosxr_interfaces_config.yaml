@@ -20,5 +20,5 @@
 
     - name: copy contents to local file
       copy:
-        content: "{{ result['json_data'] }}"
+        content: "{{ result['json_data'] | to_nice_json }}"
         dest: "./config_store/iosxr/613/openconfig-interfaces.json"
